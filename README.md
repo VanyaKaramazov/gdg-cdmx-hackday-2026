@@ -26,7 +26,7 @@ En lugar de utilizar RAG o Fine-tuning, el núcleo lógico del proyecto se basa 
 1.  **Ingesta y Extracción:** A través de la biblioteca `PyPDF2`, el sistema extrae la información de los expedientes médicos en formato PDF.
 2.  **Estructuración JSON:** El texto extraído se envía al modelo Gemma 4, el cual identifica la información clínica relevante y genera un objeto JSON puramente estructurado, inferiendo incluso el nivel de urgencia clínica.
 3.  **Almacenamiento Relacional:** Este JSON se normaliza y se inserta automáticamente en una base de datos SQL (`SQLite`).
-4.  **Motor NL2SQL:** Para resolver la brecha técnica del personal, implementamos un agente conversacional. El personal de salud puede hacer consultas en lenguaje natural (ej. *"¿Cuántos pacientes varones tienen glucosa alta?"*), Gemma 4 traduce esto a consultas SQL bajo el capó, y devuelve la información requerida en un formato claro y humano.
+4.  **Motor NL2SQL:** Para resolver la brecha técnica del personal, implementamos un agente conversacional. El personal de salud puede hacer consultas en lenguaje natural (ej. *"¿Cuántos pacientes varones tienen glucosa alta?"*), Gemma 4 traduce esto a consultas SQL bajo el capó, y devuelve la información requerida en un formato claro y humano o agrega nuevos registros según sea el caso.
 
 ---
 
